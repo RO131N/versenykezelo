@@ -1,3 +1,39 @@
+body{
+    background-color: lightslategrey;
+}
+/*
+Verseny felvétele
+*/
+div.mycontainer {
+    width:100%;
+    overflow:auto;
+  }
+  div.mycontainer div {
+    width:50%;  
+    float:left;
+  }
+  /*
+Forduló felvétele
+*/
+  div.mycontainerr {
+    width:100%;
+    overflow:auto;
+  }
+  div.mycontainerr div {
+    width:50%;  
+    float:left;
+  }
+  /*
+Személy felvétele
+*/
+  div.mycontainerrr {
+    width:100%;
+    overflow:auto;
+  }
+  div.mycontainerrr div {
+    width: 50%;
+    float:left;
+  }
 h1{
     text-align: center;
     font-weight: bold;
@@ -6,4 +42,97 @@ h1{
     padding-top: 20px;
     padding-bottom: 20px;
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*
+Verseny felvétele
+*/
+.vernevbe{
+    margin-left: 550px;
+    width: 300px;
+}
+#vernev{
+    font-size: 25px;
+    color: white;
+    margin-left: 570px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#verdat{
+    font-size: 25px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: -50px;
+}
+.verdatbe{
+    margin-left: -37px;
+}
+/*
+Forduló felvétele
+*/
+#fordvernev{
+    font-size: 25px;
+    color: white;
+    margin-left: 620px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.fordnevbe{
+    margin-left: 550px;
+    width: 300px;
+}
+#forddat{
+    font-size: 25px;
+    color: white;
+    margin-left: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.forddatbe{
+    margin-left: -37px;
+}
+/*
+Fordulóhoz rendelés
+*/
+#versenyzvernev{
+    font-size: 25px;
+    color: white;
+    margin-left: 620px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.versenyzverbe{
+    margin-left: 550px;
+    width: 300px;
+}
+#versenyzfordszam
+{
+    font-size: 25px;
+    color: white;
+    margin-left: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.forduloszam{
+    margin-left: -35px;
+    width: 300px;
+}
+#versenyznev{
+    font-size: 25px;
+    color: white;
+    margin-left: -50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.button{
+    margin-left: 900px;
+    font-size: 20px;
 }
