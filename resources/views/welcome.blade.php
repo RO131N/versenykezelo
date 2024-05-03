@@ -23,15 +23,13 @@
         <input type="text" name="vernevbe" id="vernevbe" class="vernevbe">
         </div>
         <div>
-            
         <p id="verdat">Verseny dátum</p>
         <input type="date" name="verdatbe" id="verdatbe" class="verdatbe">
         </div>
         </div>
-        <br>
-        <br>
-        <br>
+        
         <button class="buttonv">Felvétel</button>
+        <p id="jelv">Jelenlegi versenyek:</p>
         <br>
         <br>
     <div id="lathatof">
@@ -48,12 +46,9 @@
         <input type="date" name="forddatbe" id="forddatbe" class="forddatbe">
         </div>
     </div>
-        <br>
-        <br>
-        <br>
+        
         <button class="buttonf">Felvétel</button>
-        <br>
-        <br>
+        <p id="jelf">Jelenlegi fordulók:</p>
         <hr>
         </div>
         <div id="lathatov">
