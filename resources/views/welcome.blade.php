@@ -4,7 +4,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/alap.css">
-        <title>Laravel</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="/js/alap.js"></script>
+        
+       
+        <title>Versenykezelő</title>
 
 
     </head>
@@ -19,6 +23,7 @@
         <input type="text" name="vernevbe" id="vernevbe" class="vernevbe">
         </div>
         <div>
+            
         <p id="verdat">Verseny dátum</p>
         <input type="date" name="verdatbe" id="verdatbe" class="verdatbe">
         </div>
@@ -26,10 +31,10 @@
         <br>
         <br>
         <br>
-        <input type="button" value="Felvétel" class="button">
+        <button class="buttonv">Felvétel</button>
         <br>
         <br>
-
+    <div id="lathatof">
         <hr>
         <h2>Új forduló felvétele</h2>
         <br>
@@ -46,20 +51,17 @@
         <br>
         <br>
         <br>
-        <input type="button" value="Felvétel" class="button">
+        <button class="buttonf">Felvétel</button>
         <br>
         <br>
         <hr>
-
+        </div>
+        <div id="lathatov">
         <h2>Fordulóhoz rendelés</h2>
         <br>
     <div class="mycontainerrr">
         <div>
-        <p id="versenyzvernev">Verseny neve</p>
-        <input type="text" name="versenyzverbe" id="versenyzverbe" class="versenyzverbe">
-        </div>
-        <div>
-        <p id="versenyzfordszam">Forduló száma</p>
+        <p id="versenyzfordszam">Forduló kódja</p>
         <input type="text" name="forduloszambe" id="forduloszambe" class="forduloszambe">
         </div>
         <div>
@@ -67,11 +69,13 @@
         <input type="text" name="versenyzo" id="versenyzo" class="versenyzo">
         </div>
     </div>
+    
         <br>
         <br>
         <br>
-        <input type="button" value="Felvétel" class="button">
+        <button class="buttonve">Felvétel</button>
+        </div>
+       
         
-        <hr>
     </body>
 </html>

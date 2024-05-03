@@ -1,6 +1,9 @@
 body{
     background-color: lightslategrey;
 }
+#lathatof,#lathatov{
+    visibility: hidden;
+}
 /*
 Verseny felvétele
 */
@@ -55,13 +58,13 @@ h2{
 Verseny felvétele
 */
 .vernevbe{
-    margin-left: 550px;
+    margin-left: 610px;
     width: 300px;
 }
 #vernev{
     font-size: 25px;
     color: white;
-    margin-left: 570px;
+    margin-left: 630px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
@@ -70,10 +73,10 @@ Verseny felvétele
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-left: -50px;
+    margin-left: 10px;
 }
 .verdatbe{
-    margin-left: -37px;
+    margin-left: 23px;
 }
 /*
 Forduló felvétele
@@ -81,58 +84,51 @@ Forduló felvétele
 #fordvernev{
     font-size: 25px;
     color: white;
-    margin-left: 620px;
+    margin-left: 680px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 .fordnevbe{
-    margin-left: 550px;
+    margin-left: 610px;
     width: 300px;
 }
 #forddat{
     font-size: 25px;
     color: white;
-    margin-left: -50px;
+    margin-left: 10px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
 .forddatbe{
-    margin-left: -37px;
+    margin-left: 23px;
 }
 /*
 Fordulóhoz rendelés
 */
-#versenyzvernev{
-    font-size: 25px;
-    color: white;
-    margin-left: 620px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-}
-.versenyzverbe{
-    margin-left: 550px;
-    width: 300px;
-}
 #versenyzfordszam
 {
     font-size: 25px;
     color: white;
-    margin-left: -50px;
+    margin-left: 680px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.forduloszam{
-    margin-left: -35px;
+.forduloszambe{
+    margin-left: 610px;
     width: 300px;
 }
 #versenyznev{
     font-size: 25px;
     color: white;
-    margin-left: -50px;
+    margin-left: 80px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.button{
+.versenyzo{
+    margin-left: 25px;
+    width: 300px;
+}
+.buttonv,.buttonf,.buttonve{
     margin-left: 900px;
     font-size: 20px;
 }
