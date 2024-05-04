@@ -30,6 +30,10 @@
         
         <button class="buttonv">Felvétel</button>
         <p id="jelv">Jelenlegi versenyek:</p>
+        @foreach($versenyek as $verseny)
+        <div>{{$verseny['type']}}</div>
+        @endforeach
+        
         <br>
         <br>
     <div id="lathatof">
