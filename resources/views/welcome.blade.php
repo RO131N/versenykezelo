@@ -30,13 +30,13 @@
         
         <button class="buttonv">Felvétel</button>
         <p id="jelv">Jelenlegi versenyek:</p>
-        @foreach($versenyek as $key => $verseny)
-        <div>
-        {{$verseny->megnevezes}}
-        {{$verseny->datum}}
-
-        </div>
+        @foreach($versenyek as $verseny)
+        <p>{{$verseny->megnevezes}}</p>
         @endforeach
+        @foreach($fordulok as $fordulo)
+        <p>{{$fordulo->versenyid}}</p>
+        @endforeach
+       
         
         
         <br>
