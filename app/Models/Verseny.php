@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Verseny extends Model
 {
     use HasFactory;
-    
+    protected $table = 'versenyek';
 }

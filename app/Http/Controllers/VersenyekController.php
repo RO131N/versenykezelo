@@ -1,5 +1,6 @@
-<?php
 
+<?php
+/*
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -9,9 +10,13 @@ class VersenyekController extends Controller
 {
     public function index(){
         $versenyek = Verseny::all();
-
-        return view('welcome', ['versenyek' => $versenyek,]);
-    }
+    
+        return view('welcome', [
+            'versenyek' => $versenyek,
+        ]);
+}
+    
 
 
 }
+*/
