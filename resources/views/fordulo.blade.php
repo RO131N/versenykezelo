@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="/js/alap.js"></script>
-        <link
+        <link 
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
             integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
@@ -27,7 +27,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/css/bootstrap-datetimepicker.min.css"
         />
-        <title>Versenykezelő</title>
+        <title>Forduló felvétel</title>
     </head>
     <body class="bg-dark text-white">
     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
@@ -36,19 +36,20 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active text-primary" href="#">Versenykezelés <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link text-secondary" href="fordulo">Fordulókezelés </a>
-      <a class="nav-item nav-link text-secondary" href="versenyzo">Versenyzo</a>
+      <a class="nav-item nav-link text-secondary" href="/">Versenykezelés </a>
+      <a class="nav-item nav-link active text-primary" href="#">Fordulókezelés <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link text-secondary " href="versenyzo">Versenyzo</a>
     </div>
   </div>
 </nav>
-    <div class="form-group">
+<div class="form-group">
     
-        <div class="container p-3">
-            <h1 class="bg-info p-3 rounded">Versenykezelő</h1>
+    <div class="container p-3">
+        <h1 class="bg-info p-3 rounded">Fordulókezelő</h1>
+        <br>
             <form action="">
                 <div class="border p-3 rounded">
-                    <h2 class="m-0">Új verseny felvétele</h2>
+                    <h2 class="m-0">Új forduló felvétele</h2>
                     <div class="form-group">
                         <h5>Verseny megnevezése</h5>
                         <div class="input-group input-group-sm mb-3">
@@ -59,7 +60,7 @@
                             />
                         </div>
                     </div>
-                    <h5>Verseny dátuma</h5>
+                    <h5>Forduló dátuma</h5>
                     <div class="input-group date form-group" id="datumvalaszto">
                         <input
                             type="text"
@@ -70,42 +71,26 @@
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
                     </div>
-                    <h5>Versenyen elérhető nyelvek</h5>
-                        <div class="input-group input-group-sm mb-3">
-                            <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Versenyen elérhető nyelvek"
-                            />
-                        </div>
-                    <h5>Verseny helyszíne</h5>
-                    <div class="input-group input-group-sm mb-3">
-                        <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Verseny helyszíne"
-                        />
-                    </div>
                     <div class="form-group">
                         <button
                             type="submit"
-                            class="btn btn-light mt-5 float-right buttonv"
+                            class="btn btn-light mt-5 float-right buttonf"
                         >
                             Felvétel
                         </button>
                     </div>
                 </div>
             </form>
-            <br>
-            <p id="jelv">Jelenlegi versenyek:</p>
-                    
-                @foreach($versenyek as $verseny)
-                <p>{{$verseny->megnevezes}}</p>
-                @endforeach
-        <script>
-            $(function () {
-                $("#datumvalaszto").datetimepicker();
-            });
-        </script>
+                    <br>
+            <p id="jelf">Jelenlegi fordulók:</p>
+            @foreach($fordulok as $fordulo)
+            <p>{{$fordulo->versenyid}}</p>
+            @endforeach
+    </div>
+    <script>
+        $(function () {
+            $("#datumvalaszto").datetimepicker();
+        });
+    </script>
     </body>
 </html>
