@@ -1,12 +1,14 @@
 $(document).ready(function(){
     $(".buttonv").click(function(){
-      $("#lathatof").css('visibility', 'visible');
-      $("#jelv").css('visibility', 'visible');
+      $(".lathatof").css('display', 'block');
+      event.preventDefault();
+      $("#jelv").css('display', 'block');
     });
   });
   $(document).ready(function(){
     $(".buttonf").click(function(){
-      $("#lathatov").css('visibility', 'visible');
-      $("#jelf").css('visibility', 'visible');
+      $(".lathatov").css('display', 'block');
+      event.preventDefault();
+      $("#jelf").css('display', 'block');
     });
   });

@@ -31,7 +31,20 @@
         <title>Versenyző felvétel</title>
     </head>
     <body class="bg-dark text-white">
-        
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link text-secondary" href="/">Versenykezelés </a>
+      <a class="nav-item nav-link active text-primary" href="#">Versenyzo<span class="sr-only">(current)</span></a>
+    </div>
+  </div>
+</nav>
+    <div class="form-group">
+                        
+                    </div>
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenyző felvétel</h1>
             <form action="">
