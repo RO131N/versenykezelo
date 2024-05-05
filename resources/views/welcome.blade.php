@@ -43,10 +43,11 @@
                             <input
                                 type="text"
                                 class="form-control"
-                                placeholder="Verseny neve"
+                                placeholder="Verseny megnevezése"
                             />
                         </div>
                     </div>
+                    <h5>Verseny dátuma</h5>
                     <div class="input-group date form-group" id="datumvalaszto">
                         <input
                             type="text"
@@ -56,6 +57,22 @@
                         <span class="input-group-addon">
                             <span class="glyphicon glyphicon-calendar"></span>
                         </span>
+                    </div>
+                    <h5>Versenyen elérhető nyelvek</h5>
+                        <div class="input-group input-group-sm mb-3">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Versenyen elérhető nyelvek"
+                            />
+                        </div>
+                    <h5>Verseny helyszíne</h5>
+                    <div class="input-group input-group-sm mb-3">
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Verseny helyszíne"
+                        />
                     </div>
                     <div class="form-group">
                         <button
@@ -67,23 +84,12 @@
                     </div>
                 </div>
             </form>
+            <br>
             <p id="jelv">Jelenlegi versenyek:</p>
                     
                 @foreach($versenyek as $verseny)
                 <p>{{$verseny->megnevezes}}</p>
                 @endforeach
-                @foreach($fordulok as $fordulo)
-                <p>{{$fordulo->versenyid}}</p>
-                @endforeach
-                @foreach($versenyzok as $versenyz)
-                <p>{{$versenyz->nev}}</p>
-                @endforeach
-                @foreach($felhasznalok as $felh)
-                <p>{{$felh->email}}</p>
-                @endforeach
-                !
-
-            <br />
             <br />
             <div id="lathatof">
                 <hr />
@@ -110,11 +116,22 @@
                     </div>
                 </div>
 
-                <button class="buttonf">Felvétel</button>
+                <button
+                            type="submit"
+                            class="btn btn-light mt-5 float-right"
+                        >
+                            Felvétel
+                        </button>
+                        <br>
+                        <br>
                 <p id="jelf">Jelenlegi fordulók:</p>
+                @foreach($fordulok as $fordulo)
+                <p>{{$fordulo->versenyid}}</p>
+                @endforeach
+
                 <hr />
             </div>
-            <div id="lathatov">
+            <div class="lathatov">
                 <h2>Fordulóhoz rendelés</h2>
                 <br />
                 <div class="mycontainerrr">
@@ -137,11 +154,11 @@
                         />
                     </div>
                 </div>
-
-                <br />
-                <br />
-                <br />
-                <button class="buttonve">Felvétel</button>
+                <button
+                            type="submit"
+                            class="btn btn-light mt-5 float-right">
+                            Felvétel
+                        </button>
             </div>
         </div>
         <script>

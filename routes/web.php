@@ -9,4 +9,6 @@ Route::get('/', function () {
     $versenyzok=DB::table('versenyzok')->get();
     return view('welcome',['fordulok'=>$fordulok,'versenyek'=>$versenyek,'felhasznalok'=>$felhasznalok,'versenyzok'=>$versenyzok]);
     });
-
+Route::get('versenyzo',function(){
+    return view('versenyzo');
+});

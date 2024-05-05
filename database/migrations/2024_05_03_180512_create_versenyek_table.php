@@ -16,8 +16,7 @@ return new class extends Migration
             $table->string('megnevezes');
             $table->date('datum');
             $table->string('nyelvek');
-            $table->integer('jopontok');
-            $table->integer('rosszpontok');
+            $table->string('helyszin');
         });
     }
 
