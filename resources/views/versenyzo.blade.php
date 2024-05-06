@@ -47,7 +47,8 @@
                     </div>
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenyző felvétel</h1>
-            <form action="/" method="POST">
+            <form action="/versenyzo" method="POST">
+                @csrf
                     <div class="border p-3 rounded">
                         <h2 class="m-0">Fordulóhoz rendelés</h2>
                         <div class="form-group">
@@ -56,6 +57,7 @@
                                 <input
                                     type="text"
                                     class="form-control"
+                                    name="nev"
                                     placeholder="Versenyző neve"
                                 />
                             </div>
@@ -66,17 +68,13 @@
                                 <input
                                     type="text"
                                     class="form-control"
+                                    name="kod"
                                     placeholder="Forduló kódja"
                                 />
                             </div>
                         </div>
                         <div class="form-group">
-                            <button
-                                type="submit"
-                                class="btn btn-light mt-5 float-right"
-                            >
-                                Felvétel
-                            </button>
+                        <input type="submit" value="Hozzáadás" class="btn btn-light mt-5 float-right buttonv">
                         </div>
                     </div>
                 </form>

@@ -47,16 +47,18 @@
     <div class="container p-3">
         <h1 class="bg-info p-3 rounded">Fordulókezelő</h1>
         <br>
-        <form action="/" method="POST">
+        <form action="/fordulo" method="POST">
+            @csrf
                 <div class="border p-3 rounded">
                     <h2 class="m-0">Új forduló felvétele</h2>
                     <div class="form-group">
-                        <h5>Verseny megnevezése</h5>
+                        <h5>Verseny kódja</h5>
                         <div class="input-group input-group-sm mb-3">
                             <input
-                                type="text"
+                                type="number"
                                 class="form-control"
-                                placeholder="Verseny megnevezése"
+                                placeholder="Verseny kódja"
+                                name="versenyid"
                             />
                         </div>
                     </div>
@@ -66,18 +68,11 @@
                             type="text"
                             class="form-control"
                             placeholder="Dátum"
+                            name="datum"
                         />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
                     </div>
                     <div class="form-group">
-                        <button
-                            type="submit"
-                            class="btn btn-light mt-5 float-right buttonf"
-                        >
-                            Felvétel
-                        </button>
+                    <input type="submit" value="Hozzáadás" class="btn btn-light mt-5 float-right buttonv">
                     </div>
                 </div>
             </form>
@@ -87,10 +82,5 @@
             <p>{{$fordulo->versenyid}}</p>
             @endforeach
     </div>
-    <script>
-        $(function () {
-            $("#datumvalaszto").datetimepicker();
-        });
-    </script>
     </body>
 </html>

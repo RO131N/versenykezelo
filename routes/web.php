@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VersenyekController;
+use App\Http\Controllers\VersenyzokController;
+use App\Http\Controllers\FordulokController;
 
 
 Route::get('/', function () {
@@ -26,4 +28,6 @@ Route::get('/', function () {
         return view('fordulo',['fordulok'=>$fordulok,'versenyek'=>$versenyek,'felhasznalok'=>$felhasznalok,'versenyzok'=>$versenyzok]);
         });
         Route::post('welcome',[VersenyekController::class,'create']);
+        Route::post('fordulo',[FordulokController::class,'create']);
+        Route::post('versenyzo',[VersenyzokController::class,'create']);
 

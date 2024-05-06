@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->integer('versenyid');
             $table->date('datum');
+            $table->date('updated_at');
+            $table->date('created_at');
         });
     }
 

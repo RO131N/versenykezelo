@@ -113,7 +113,7 @@
                         />
                     </div>
                     <div class="form-group">
-                    <input type="submit" value="Hozzáadás" class="btn btn-light mt-5 float-right">
+                    <input type="submit" value="Hozzáadás" class="btn btn-light mt-5 float-right buttonv">
                     </div>
                 </div>
             </form>

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('lakcim');
             $table->string('telefon');
+            $table->date('updated_at');
+            $table->date('created_at');
         });
     }
 
