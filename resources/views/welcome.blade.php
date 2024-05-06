@@ -69,11 +69,8 @@
                             class="form-control"
                             id="datum"
                             name="datum"
-                            placeholder="Dátum"
+                            placeholder="YYYY-MM-DD"
                         />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
                     </div>
                     <h5>Versenyen elérhető nyelvek</h5>
                         <div class="input-group input-group-sm mb-3">
@@ -85,14 +82,34 @@
                                 placeholder="Versenyen elérhető nyelvek"
                             />
                         </div>
-                    <h5>Verseny helyszíne</h5>
+                    <h5>Pontok jó válaszért</h5>
                     <div class="input-group input-group-sm mb-3">
                         <input
-                            type="text"
+                            type="number"
                             class="form-control"
-                            id="helyszin"
-                            name="helyszin"
-                            placeholder="Verseny helyszíne"
+                            id="jopontok"
+                            name="jopontok"
+                            placeholder="Jó válaszért szerezhető pontok"
+                        />
+                    </div>
+                    <h5>Pontok rossz válaszért</h5>
+                    <div class="input-group input-group-sm mb-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="rosszpontok"
+                            name="rosszpontok"
+                            placeholder="Rossz válaszért szerezhető pontok"
+                        />
+                    </div>
+                    <h5>Pontok üres válaszért</h5>
+                    <div class="input-group input-group-sm mb-3">
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="urespontok"
+                            name="urespontok"
+                            placeholder="Üres válaszért szerezhető pontok"
                         />
                     </div>
                     <div class="form-group">
@@ -106,10 +123,5 @@
                 @foreach($versenyek as $verseny)
                 <p>{{$verseny->megnevezes}}</p>
                 @endforeach
-        <script>
-            $(function () {
-                $("#datumvalaszto").datetimepicker();
-            });
-        </script>
     </body>
 </html>

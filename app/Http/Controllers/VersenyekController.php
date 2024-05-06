@@ -15,7 +15,9 @@ class VersenyekController extends Controller
     $versenyek->megnevezes = $request->megnevezes;
     $versenyek->datum = $request->datum;
     $versenyek->nyelvek = $request->nyelvek;
-    $versenyek->helyszin = $request->helyszin;
+    $versenyek->jopontok = $request->jopontok;
+    $versenyek->rosszpontok = $request->rosszpontok;
+    $versenyek->urespontok = $request->urespontok;
     $versenyek->save();
 
     
