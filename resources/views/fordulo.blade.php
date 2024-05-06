@@ -78,8 +78,9 @@
             </form>
                     <br>
             <p id="jelf">Jelenlegi fordulók:</p>
+            <p>Verseny kódja | Forduló dátuma</p>
             @foreach($fordulok as $fordulo)
-            <p>{{$fordulo->versenyid}}</p>
+            <p>{{$fordulo->versenyid}}, {{$fordulo->datum}}</p>
             @endforeach
     </div>
     </body>

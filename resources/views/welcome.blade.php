@@ -119,9 +119,9 @@
             </form>
             <br>
             <p id="jelv">Jelenlegi versenyek:</p>
-                    
+            <p>Verseny neve | Verseny dátuma | Versenyen beszélt nyelvek | Jó válasz pontszáma | Rossz válasz pontszáma | Üres válasz pontszáma</p>
                 @foreach($versenyek as $verseny)
-                <p>{{$verseny->megnevezes}}</p>
+                <p>{{$verseny->megnevezes}}, {{$verseny->datum}}, {{$verseny->nyelvek}}, {{$verseny->jopontok}}, {{$verseny->rosszpontok}}, {{$verseny->urespontok}}</p>
                 @endforeach
     </body>
 </html>
