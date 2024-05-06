@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VersenyekController;
+
 
 Route::get('/', function () {
     $versenyek = DB::table('versenyek')->get();
@@ -23,4 +25,5 @@ Route::get('/', function () {
         $versenyzok=DB::table('versenyzok')->get();
         return view('fordulo',['fordulok'=>$fordulok,'versenyek'=>$versenyek,'felhasznalok'=>$felhasznalok,'versenyzok'=>$versenyzok]);
         });
+        Route::post('welcome',[VersenyekController::class,'create']);
 

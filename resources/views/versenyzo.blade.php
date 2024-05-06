@@ -47,7 +47,7 @@
                     </div>
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenyző felvétel</h1>
-            <form action="">
+            <form action="/" method="POST">
                     <div class="border p-3 rounded">
                         <h2 class="m-0">Fordulóhoz rendelés</h2>
                         <div class="form-group">

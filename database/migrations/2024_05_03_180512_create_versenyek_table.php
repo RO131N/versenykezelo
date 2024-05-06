@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('versenyek', function (Blueprint $table) {
             $table->id();
             $table->string('megnevezes');
-            $table->date('datum');
+            $table->datetime('datum');
             $table->string('nyelvek');
             $table->string('helyszin');
+            $table->date('updated_at');
+            $table->date('created_at');
         });
     }
 

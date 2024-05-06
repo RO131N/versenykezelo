@@ -47,7 +47,7 @@
     <div class="container p-3">
         <h1 class="bg-info p-3 rounded">Fordulókezelő</h1>
         <br>
-            <form action="">
+        <form action="/" method="POST">
                 <div class="border p-3 rounded">
                     <h2 class="m-0">Új forduló felvétele</h2>
                     <div class="form-group">

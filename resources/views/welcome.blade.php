@@ -46,7 +46,8 @@
     
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenykezelő</h1>
-            <form action="">
+            <form action="/welcome" method="POST">
+                @csrf
                 <div class="border p-3 rounded">
                     <h2 class="m-0">Új verseny felvétele</h2>
                     <div class="form-group">
@@ -55,6 +56,8 @@
                             <input
                                 type="text"
                                 class="form-control"
+                                id="megnevezes"
+                                name="megnevezes"
                                 placeholder="Verseny megnevezése"
                             />
                         </div>
@@ -64,6 +67,8 @@
                         <input
                             type="text"
                             class="form-control"
+                            id="datum"
+                            name="datum"
                             placeholder="Dátum"
                         />
                         <span class="input-group-addon">
@@ -75,6 +80,8 @@
                             <input
                                 type="text"
                                 class="form-control"
+                                id="nyelvek"
+                                name="nyelvek"
                                 placeholder="Versenyen elérhető nyelvek"
                             />
                         </div>
@@ -83,16 +90,13 @@
                         <input
                             type="text"
                             class="form-control"
+                            id="helyszin"
+                            name="helyszin"
                             placeholder="Verseny helyszíne"
                         />
                     </div>
                     <div class="form-group">
-                        <button
-                            type="submit"
-                            class="btn btn-light mt-5 float-right buttonv"
-                        >
-                            Felvétel
-                        </button>
+                    <input type="submit" value="Hozzáadás" class="btn btn-light mt-5 float-right">
                     </div>
                 </div>
             </form>
