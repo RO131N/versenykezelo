@@ -27,7 +27,8 @@ Route::get('/', function () {
         $versenyzok=DB::table('versenyzok')->get();
         return view('fordulo',['fordulok'=>$fordulok,'versenyek'=>$versenyek,'felhasznalok'=>$felhasznalok,'versenyzok'=>$versenyzok]);
         });
-        Route::post('welcome',[VersenyekController::class,'create']);
-        Route::post('fordulo',[FordulokController::class,'create']);
-        Route::post('versenyzo',[VersenyzokController::class,'create']);
+        //Route::post('welcome',[VersenyekController::class,'create']);
+        //Route::post('fordulo',[FordulokController::class,'create']);
+        //Route::post('versenyzo',[VersenyzokController::class,'create']);
+        Route::post('welcome',[VersenyekController::class,'upload']);
 

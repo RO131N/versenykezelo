@@ -47,7 +47,7 @@
                     </div>
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenyző kezelés</h1>
-            <form action="/versenyzo" method="POST">
+            <form action="/versenyzo" method="POST" id="add">
                 @csrf
                     <div class="border p-3 rounded">
                         <h2 class="m-0">Fordulóhoz rendelés</h2>

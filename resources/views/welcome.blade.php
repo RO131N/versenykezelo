@@ -46,7 +46,7 @@
     
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenykezelő</h1>
-            <form action="/welcome" method="POST">
+            <form action="/welcome" method="POST" id="add">
                 @csrf
                 <div class="border p-3 rounded">
                     <h2 class="m-0">Új verseny felvétele</h2>
