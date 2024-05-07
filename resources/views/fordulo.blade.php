@@ -52,12 +52,12 @@
                 <div class="border p-3 rounded">
                     <h2 class="m-0">Új forduló felvétele</h2>
                     <div class="form-group">
-                        <h5>Verseny kódja</h5>
+                        <h5>Verseny neve</h5>
                         <div class="input-group input-group-sm mb-3">
                             <input
-                                type="number"
+                                type="text"
                                 class="form-control"
-                                placeholder="Verseny kódja"
+                                placeholder="Verseny neve"
                                 name="versenyid"
                             />
                         </div>

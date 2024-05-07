@@ -62,14 +62,14 @@
                             />
                         </div>
                     </div>
-                    <h5>Verseny dátuma</h5>
+                    <h5>Verseny éve</h5>
                     <div class="input-group date form-group" id="datumvalaszto">
                         <input
                             type="text"
                             class="form-control"
                             id="datum"
                             name="datum"
-                            placeholder="YYYY-MM-DD"
+                            placeholder="YYYY"
                         />
                     </div>
                     <h5>Versenyen elérhető nyelvek</h5>
