@@ -13,7 +13,7 @@ $(document).ready(function() {
         document.getElementById("nyelvek").value = "";
         document.getElementById("jopontok").value = ""
         document.getElementById("rosszpontok").value = "";
-        document.getElementById("urespontok").value = ""
+        document.getElementById("forddatum").value = ""
         fetchversenyek();
     });
     fetchversenyek();

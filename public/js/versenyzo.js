@@ -1,15 +1,37 @@
 $(document).ready(function() {
     $('#addform').on('submit', function(e) {
         e.preventDefault();
+        var hozzadva = false;
         $.ajax({
-            type: 'POST',
-            url: '/versenyzo',
-            data: $('#addform').serialize(),
-            
+            type: 'GET',
+            url: '/fetch-fordulok',
+            dataType: 'json',
+            success: function(response){
+                $.each(response.fordulok, function(key,item){
+                    if(item.datum == document.getElementById("forddatum").value)
+                        {
+                            $.ajax({
+                                type: 'POST',
+                                url: '/versenyzo',
+                                data: $('#addform').serialize(),
+                                
+                            })
+                            fetchversenyzok();
+                            document.getElementById("nev").value = "";
+                            document.getElementById("forddatum").value = ""
+                            hozzadva = true;
+                        }
+                   
+                })
+                if(!hozzadva)
+                    {
+                        alert("Nincs ilyen dátumú forduló!");
+                        document.getElementById("nev").value = "";
+                        document.getElementById("forddatum").value = ""
+                    }
+            }
         })
-        fetchversenyzok();
-        document.getElementById("nev").value = "";
-        document.getElementById("forddatum").value = ""
+
     });
     fetchversenyzok();
     function fetchversenyzok()

@@ -1,16 +1,42 @@
 $(document).ready(function() {
     $('#addform').on('submit', function(e) {
         e.preventDefault();
+        var hozzadva = false;
         $.ajax({
-            type: 'POST',
-            url: '/fordulo',
-            data: $('#addform').serialize(),
+            type: 'GET',
+            url: '/fetch-versenyek',
+            dataType: 'json',
+            success: function(response){
+                $.each(response.versenyek, function(key,item){
+                    if(item.megnevezes == document.getElementById("versenynev").value)
+                        {
+                            $.ajax({
+                                type: 'POST',
+                                url: '/fordulo',
+                                data: $('#addform').serialize(),
+                                
+                               
+                            })
+                            document.getElementById("versenynev").value = "";
+                            document.getElementById("forddat").value = ""
+                            fetchfordulok();
+                            hozzadva = true;
+                        
+                        }
+                        
+                });
+                if(!hozzadva)
+                    {
+                        alert("Nincs ilyen verseny meghírdetve!");
+                        document.getElementById("versenynev").value = "";
+                        document.getElementById("forddat").value = ""
+                    }
+            },
             
-           
+                
+            
         })
-        document.getElementById("versenynev").value = "";
-        document.getElementById("forddat").value = ""
-        fetchfordulok();
+        
     });
     fetchfordulok();
     function fetchfordulok()
