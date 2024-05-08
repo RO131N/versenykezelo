@@ -58,18 +58,20 @@
                                     type="text"
                                     class="form-control"
                                     name="nev"
+                                    id="nev"
                                     placeholder="Versenyző neve"
                                 />
                             </div>
                         </div>
                         <div class="form-group">
-                            <h5>Forduló kódja</h5>
+                            <h5>Forduló dátuma</h5>
                             <div class="input-group input-group-sm mb-3">
                                 <input
                                     type="text"
                                     class="form-control"
-                                    name="kod"
-                                    placeholder="Forduló kódja"
+                                    name="forddatum"
+                                    id="datum"
+                                    placeholder="YYYY-MM-DD"
                                 />
                             </div>
                         </div>
@@ -78,6 +80,15 @@
                         </div>
                     </div>
                 </form>
+                <br>
+                <p id="jelv">Jelenlegi versenyzők:</p>
+            <p>Versenyző neve | Forduló dátuma</p>
+                @foreach($versenyzok as $versenyzo)
+                <br>
+                <p>{{$versenyzo->nev}}, {{$versenyzo->forddatum}}</p>
+                <a href="javascript:void(0)" class="btn btn-danger">Törlés</a>
+                <br>
+                @endforeach
         </div>
     </body>
 </html>

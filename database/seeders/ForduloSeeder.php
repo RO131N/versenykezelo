@@ -23,6 +23,20 @@ class ForduloSeeder extends Seeder
                 'created_at' => date('Y-m-d H:i:s'),
                
             ],
+            [
+                'versenynev' => 'Megyei',
+                'datum' => '2023-12-12',
+                'updated_at' => date('Y-m-d H:i:s'),
+                'created_at' => date('Y-m-d H:i:s'),
+               
+            ],
+            [
+                'versenynev' => 'Országos',
+                'datum' => '2024-12-12',
+                'updated_at' => date('Y-m-d H:i:s'),
+                'created_at' => date('Y-m-d H:i:s'),
+               
+            ],
 
         ]);
     }

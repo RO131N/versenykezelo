@@ -8,21 +8,16 @@ use App\Models\Fordulo;
 
 class FordulokController extends Controller
 {
-
-    public function index(){
-        $fordulok = DB::table('fordulok')->get();
-        return view('welcome',['fordulok'=> $fordulok]);
-    }
-    public function create(Request $request)
+    public function upload(Request $request)
 {
     $fordulok = new Fordulo();
-    $fordulok->versenyid = $request->versenyid;
+    $fordulok->versenynev = $request->versenynev;
     $fordulok->datum = $request->datum;
     $fordulok->save();
 
     
 
-    return redirect('/fordulo');
+    return response()->json(['message' => 'data upload']);
 }
     
 }

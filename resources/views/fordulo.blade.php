@@ -58,7 +58,7 @@
                                 type="text"
                                 class="form-control"
                                 placeholder="Verseny neve"
-                                name="versenyid"
+                                name="versenynev"
                             />
                         </div>
                     </div>
@@ -78,9 +78,9 @@
             </form>
                     <br>
             <p id="jelf">Jelenlegi fordulók:</p>
-            <p>Verseny kódja | Forduló dátuma</p>
+            <p>Verseny neve | Forduló dátuma</p>
             @foreach($fordulok as $fordulo)
-            <p>{{$fordulo->versenyid}}, {{$fordulo->datum}}</p>
+            <p>{{$fordulo->versenynev}}, {{$fordulo->datum}}</p>
             @endforeach
     </div>
     </body>

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('fordulok', function (Blueprint $table) {
             $table->id();
-            $table->integer('versenyid');
+            $table->string('versenynev');
             $table->date('datum');
             $table->date('updated_at');
             $table->date('created_at');

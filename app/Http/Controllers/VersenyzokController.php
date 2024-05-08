@@ -10,19 +10,20 @@ use App\Models\Versenyzo;
 
 class VersenyzokController extends Controller
 {
-    public function index(){
-        $versenyzok = DB::table('versenyzok')->get();
-        return view('welcome',['versenyzok'=> $versenyzok]);
-    }
-    public function create(Request $request)
+    public function upload(Request $request)
 {
     $versenyzok = new Versenyzo();
     $versenyzok->nev = $request->nev;
-    $versenyzok->kod = $request->kod;
+    $versenyzok->forddatum = $request->forddatum;
     $versenyzok->save();
 
     
 
-    return redirect('/versenyzo');
+    return response()->json(['message' => 'data upload']);
 }
+    public function deleteVersenyzo($id){
+        $versenyzok= Versenyzo::find($id);
+        $versenyzok->delete();
+        return response()->json();
+    }
 }

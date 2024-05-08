@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('versenyzok', function (Blueprint $table) {
             $table->id();
             $table->string('nev');
-            $table->string('kod');
+            $table->string('forddatum');
             $table->date('updated_at');
             $table->date('created_at');
         });
