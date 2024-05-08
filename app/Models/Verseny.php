@@ -9,4 +9,5 @@ class Verseny extends Model
 {
     use HasFactory;
     protected $table = 'versenyek';
+    protected $fillable =['megnevezes','datum','nyelvek','jopontok','rosszpontok','urespontok'];
 }

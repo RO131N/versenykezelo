@@ -10,20 +10,19 @@ use App\Models\Versenyzo;
 
 class VersenyzokController extends Controller
 {
-    public function upload(Request $request)
-{
-    $versenyzok = new Versenyzo();
-    $versenyzok->nev = $request->nev;
-    $versenyzok->forddatum = $request->forddatum;
-    $versenyzok->save();
-
     
-
-    return response()->json(['message' => 'data upload']);
+    public function store(Request $request)
+{
+    
+    $versenyzok = new Versenyzo();
+    $versenyzok->nev = $request->input('nev');
+    $versenyzok->forddatum = $request->input('forddatum');
+    $versenyzok->save();
+    
 }
-    public function deleteVersenyzo($id){
-        $versenyzok= Versenyzo::find($id);
-        $versenyzok->delete();
-        return response()->json();
-    }
+    //public function deleteVersenyzo($id){
+       // $versenyzok= Versenyzo::find($id);
+        //$versenyzok->delete();
+        //return response()->json();
+   // }
 }

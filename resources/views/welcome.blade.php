@@ -4,7 +4,9 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="/js/alap.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/js/verseny.js"></script>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -46,8 +48,8 @@
     
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenykezelő</h1>
-            <form action="/welcome" method="POST" id="add">
-                @csrf
+            <form id="addform">
+                {{csrf_field()}}
                 <div class="border p-3 rounded">
                     <h2 class="m-0">Új verseny felvétele</h2>
                     <div class="form-group">

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('versenyek', function (Blueprint $table) {
             $table->id();
             $table->string('megnevezes');
-            $table->date('datum');
+            $table->string('datum');
             $table->string('nyelvek');
             $table->integer('jopontok');
             $table->integer('rosszpontok');

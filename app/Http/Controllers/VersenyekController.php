@@ -9,7 +9,7 @@ use App\Models\Verseny;
 class VersenyekController extends Controller
 {
     
-    public function upload(Request $request)
+    public function store(Request $request)
 {
     $versenyek = new Verseny();
     $versenyek->megnevezes = $request->megnevezes;
@@ -20,8 +20,5 @@ class VersenyekController extends Controller
     $versenyek->urespontok = $request->urespontok;
     $versenyek->save();
 
-    
-
-    return response()->json(['message' => 'data upload']);
 }
 }

@@ -9,4 +9,5 @@ class Versenyzo extends Model
 {
     use HasFactory;
     protected $table = 'versenyzok';
+    protected $fillable =['nev','forddatum'];
 }

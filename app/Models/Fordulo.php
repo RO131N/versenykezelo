@@ -9,4 +9,5 @@ class Fordulo extends Model
 {
     use HasFactory;
     protected $table = 'fordulok';
+    protected $fillable=['versenynev','datum'];
 }

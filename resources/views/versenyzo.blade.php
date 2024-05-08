@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="/js/alap.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="/js/versenyzo.js"></script>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
@@ -47,8 +48,8 @@
                     </div>
         <div class="container p-3">
             <h1 class="bg-info p-3 rounded">Versenyző kezelés</h1>
-            <form action="/versenyzo" method="POST" id="add">
-                @csrf
+            <form id="addform">
+                {{csrf_field()}}
                     <div class="border p-3 rounded">
                         <h2 class="m-0">Fordulóhoz rendelés</h2>
                         <div class="form-group">
@@ -70,12 +71,13 @@
                                     type="text"
                                     class="form-control"
                                     name="forddatum"
-                                    id="datum"
+                                    id="forddatum"
                                     placeholder="YYYY-MM-DD"
                                 />
                             </div>
                         </div>
                         <div class="form-group">
+                            
                         <input type="submit" value="Hozzáadás" class="btn btn-light mt-5 float-right buttonv">
                         </div>
                     </div>
