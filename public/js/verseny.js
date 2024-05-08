@@ -8,7 +8,12 @@ $(document).ready(function() {
             data: $('#addform').serialize(),
             
         })
-    
+        document.getElementById("megnevezes").value = "";
+        document.getElementById("datum").value = ""
+        document.getElementById("nyelvek").value = "";
+        document.getElementById("jopontok").value = ""
+        document.getElementById("rosszpontok").value = "";
+        document.getElementById("urespontok").value = ""
         fetchversenyek();
     });
     fetchversenyek();

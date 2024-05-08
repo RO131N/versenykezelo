@@ -8,6 +8,8 @@ $(document).ready(function() {
             
         })
         fetchversenyzok();
+        document.getElementById("nev").value = "";
+        document.getElementById("forddatum").value = ""
     });
     fetchversenyzok();
     function fetchversenyzok()

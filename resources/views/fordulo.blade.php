@@ -58,6 +58,7 @@
                         <div class="input-group input-group-sm mb-3">
                             <input
                                 type="text"
+                                id="versenynev"
                                 class="form-control"
                                 placeholder="Verseny neve"
                                 name="versenynev"
@@ -68,6 +69,7 @@
                     <div class="input-group date form-group" id="datumvalaszto">
                         <input
                             type="text"
+                            id="forddat"
                             class="form-control"
                             placeholder="Dátum"
                             name="datum"

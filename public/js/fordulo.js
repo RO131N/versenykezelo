@@ -8,6 +8,8 @@ $(document).ready(function() {
             
            
         })
+        document.getElementById("versenynev").value = "";
+        document.getElementById("forddat").value = ""
         fetchfordulok();
     });
     fetchfordulok();
