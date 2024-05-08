@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#addform').on('submit', function(e) {
         e.preventDefault();
+        //Ellenőrzés hogy létezik e az adott forduló dátum
         var hozzadva = false;
         $.ajax({
             type: 'GET',
@@ -34,6 +35,7 @@ $(document).ready(function() {
 
     });
     fetchversenyzok();
+    
     function fetchversenyzok()
     {
         $.ajax({
@@ -53,6 +55,7 @@ $(document).ready(function() {
             }
         })
     }
+
     $(document).on('click','.delete_versenyzo',function (e){
         e.preventDefault();
         var ver_id = $(this).val();

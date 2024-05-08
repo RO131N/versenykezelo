@@ -47,7 +47,7 @@
                         
                     </div>
         <div class="container p-3">
-            <h1 class="bg-info p-3 rounded">Versenyző kezelés</h1>
+            <h1 class="bg-info p-3 rounded">Versenyzőkezelő</h1>
             <form id="addform">
                 {{csrf_field()}}
                     <div class="border p-3 rounded">

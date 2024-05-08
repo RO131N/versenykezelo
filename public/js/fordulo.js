@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $('#addform').on('submit', function(e) {
         e.preventDefault();
+        //Ellenőrzés hogy létezik e az adott verseny
         var hozzadva = false;
         $.ajax({
             type: 'GET',
