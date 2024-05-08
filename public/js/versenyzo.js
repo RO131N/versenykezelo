@@ -11,13 +11,14 @@ $(document).ready(function() {
                 $.each(response.fordulok, function(key,item){
                     if(item.datum == document.getElementById("forddatum").value)
                         {
+                             //létezik szóval mehet hozzá versenyző
                             $.ajax({
                                 type: 'POST',
                                 url: '/versenyzo',
                                 data: $('#addform').serialize(),
                                 
                             })
-                            fetchversenyzok();
+                            fetchversenyzok(); //újratöltjük a kiíratást
                             document.getElementById("nev").value = "";
                             document.getElementById("forddatum").value = ""
                             hozzadva = true;
@@ -26,6 +27,7 @@ $(document).ready(function() {
                 })
                 if(!hozzadva)
                     {
+                        //Nem létezik úgyhogy nem adjuk hozzá
                         alert("Nincs ilyen dátumú forduló!");
                         document.getElementById("nev").value = "";
                         document.getElementById("forddatum").value = ""
@@ -34,8 +36,9 @@ $(document).ready(function() {
         })
 
     });
+    //Feltöltés az adatokkal az oldalt
     fetchversenyzok();
-    
+
     function fetchversenyzok()
     {
         $.ajax({
@@ -55,7 +58,7 @@ $(document).ready(function() {
             }
         })
     }
-
+    //Töröljük az adott felhasználót
     $(document).on('click','.delete_versenyzo',function (e){
         e.preventDefault();
         var ver_id = $(this).val();

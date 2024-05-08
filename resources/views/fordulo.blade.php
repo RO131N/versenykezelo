@@ -91,6 +91,7 @@
                             <th>Forduló dátuma</th>
                         </tr>
                     </thead>
+                    <!-- Ide lesznek töltve az adatok -->
                     <tbody> 
                     </tbody>
                 </table>

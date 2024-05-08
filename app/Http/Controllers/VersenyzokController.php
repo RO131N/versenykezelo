@@ -10,7 +10,7 @@ use App\Models\Versenyzo;
 
 class VersenyzokController extends Controller
 {
-    
+    //Adatbázisba töltés
     public function store(Request $request)
 {
     
@@ -20,6 +20,7 @@ class VersenyzokController extends Controller
     $versenyzok->save();
     
 }
+//Kiíratás
 public function fetchversenyzok()
     {
         $versenyzok = Versenyzo::all();
@@ -27,7 +28,7 @@ public function fetchversenyzok()
             'versenyzok'=>$versenyzok,
         ]);
     }
-    
+    //Törlés
 public function destroy($id){
     $versenyzok= Versenyzo::find($id);
      $versenyzok->delete();

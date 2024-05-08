@@ -8,7 +8,7 @@ use App\Models\Verseny;
 
 class VersenyekController extends Controller
 {
-    
+    //Adatbázisba töltés
     public function store(Request $request)
 {
     $versenyek = new Verseny();
@@ -21,6 +21,7 @@ class VersenyekController extends Controller
     $versenyek->save();
 
 }
+//Kiíratás
     public function fetchversenyek()
     {
         $versenyek = Verseny::all();

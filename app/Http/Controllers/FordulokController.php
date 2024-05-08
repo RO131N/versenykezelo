@@ -8,6 +8,7 @@ use App\Models\Fordulo;
 
 class FordulokController extends Controller
 {
+    //Adatbázisba töltés
     public function store(Request $request)
 {
     $fordulok = new Fordulo();
@@ -16,6 +17,7 @@ class FordulokController extends Controller
     $fordulok->save();
 
 }
+//Kiíratás
 public function fetchfordulok()
     {
         $fordulok = Fordulo::all();

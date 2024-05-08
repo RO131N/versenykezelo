@@ -11,6 +11,7 @@ $(document).ready(function() {
                 $.each(response.versenyek, function(key,item){
                     if(item.megnevezes == document.getElementById("versenynev").value)
                         {
+                            //létezik szóval mehet hozzá forduló
                             $.ajax({
                                 type: 'POST',
                                 url: '/fordulo',
@@ -18,9 +19,9 @@ $(document).ready(function() {
                                 
                                
                             })
+                            fetchfordulok(); //Újra töltjük a kiírást
                             document.getElementById("versenynev").value = "";
                             document.getElementById("forddat").value = ""
-                            fetchfordulok();
                             hozzadva = true;
                         
                         }
@@ -28,6 +29,7 @@ $(document).ready(function() {
                 });
                 if(!hozzadva)
                     {
+                        //Nem létezik úgyhogy nem adjuk hozzá
                         alert("Nincs ilyen verseny meghírdetve!");
                         document.getElementById("versenynev").value = "";
                         document.getElementById("forddat").value = ""
@@ -39,6 +41,7 @@ $(document).ready(function() {
         })
         
     });
+    //Feltöltjük az adatokkal az oldalt
     fetchfordulok();
     function fetchfordulok()
     {

@@ -10,6 +10,7 @@ use App\Felhasznalo;
 
 class FelhasznaloController extends Controller
 {
+    //Megjelenítés
     public function index(){
         $felhasznalok = DB::table('felhasznalok')->get();
         return view('welcome',['felhasznalok'=> $felhasznalok]);

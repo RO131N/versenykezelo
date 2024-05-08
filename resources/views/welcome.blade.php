@@ -134,6 +134,7 @@
                             <th>Üres válaszokért járó pontok</th>
                         </tr>
                     </thead>
+                    <!-- ide lesznek töltve az adatok -->
                     <tbody> 
                     </tbody>
                 </table>

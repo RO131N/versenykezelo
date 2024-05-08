@@ -8,7 +8,7 @@ $(document).ready(function() {
             data: $('#addform').serialize(),
             
         })
-        fetchversenyek();
+        fetchversenyek(); //Újra töltjük a kiíratást
         document.getElementById("megnevezes").value = "";
         document.getElementById("datum").value = ""
         document.getElementById("nyelvek").value = "";
@@ -17,6 +17,7 @@ $(document).ready(function() {
         document.getElementById("urespontok").value = ""
         
     });
+    //Feltöltjük az adatokkal az oldalt
     fetchversenyek();
     function fetchversenyek()
     {
