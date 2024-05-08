@@ -40,7 +40,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active text-primary" href="#">Versenykezelés <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link text-secondary" href="fordulo">Fordulókezelés </a>
-      <a class="nav-item nav-link text-secondary" href="versenyzo">Versenyzo</a>
+      <a class="nav-item nav-link text-secondary" href="versenyzo">Versenyző</a>
     </div>
   </div>
 </nav>

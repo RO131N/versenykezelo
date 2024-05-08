@@ -40,7 +40,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link text-secondary" href="/">Versenykezelés </a>
       <a class="nav-item nav-link active text-primary" href="#">Fordulókezelés <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link text-secondary " href="versenyzo">Versenyzo</a>
+      <a class="nav-item nav-link text-secondary " href="versenyzo">Versenyző</a>
     </div>
   </div>
 </nav>
@@ -71,7 +71,7 @@
                             type="text"
                             id="forddat"
                             class="form-control"
-                            placeholder="Dátum"
+                            placeholder="YYYY-MM-DD"
                             name="datum"
                         />
                     </div>
