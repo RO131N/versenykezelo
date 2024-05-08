@@ -20,9 +20,17 @@ class VersenyzokController extends Controller
     $versenyzok->save();
     
 }
-    //public function deleteVersenyzo($id){
-       // $versenyzok= Versenyzo::find($id);
-        //$versenyzok->delete();
-        //return response()->json();
-   // }
+public function fetchversenyzok()
+    {
+        $versenyzok = Versenyzo::all();
+        return response()->json([
+            'versenyzok'=>$versenyzok,
+        ]);
+    }
+    
+public function destroy($id){
+    $versenyzok= Versenyzo::find($id);
+     $versenyzok->delete();
+     return response()->json();
+ }
 }

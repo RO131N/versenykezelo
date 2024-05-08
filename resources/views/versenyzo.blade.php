@@ -84,13 +84,21 @@
                 </form>
                 <br>
                 <p id="jelv">Jelenlegi versenyzők:</p>
-            <p>Versenyző neve | Forduló dátuma</p>
-                @foreach($versenyzok as $versenyzo)
-                <br>
-                <p>{{$versenyzo->nev}}, {{$versenyzo->forddatum}}</p>
-                <a href="javascript:void(0)" class="btn btn-danger">Törlés</a>
-                <br>
-                @endforeach
+                <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Versenyző neve</th>
+                            <th>Forduló dátuma</th>
+                            <th>Törlés</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                    </tbody>
+                </table>
+
+            </div>
         </div>
     </body>
 </html>

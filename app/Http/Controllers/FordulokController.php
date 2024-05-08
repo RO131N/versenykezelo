@@ -16,5 +16,12 @@ class FordulokController extends Controller
     $fordulok->save();
 
 }
+public function fetchfordulok()
+    {
+        $fordulok = Fordulo::all();
+        return response()->json([
+            'fordulok'=>$fordulok,
+        ]);
+    }
     
 }

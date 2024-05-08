@@ -21,4 +21,11 @@ class VersenyekController extends Controller
     $versenyek->save();
 
 }
+    public function fetchversenyek()
+    {
+        $versenyek = Verseny::all();
+        return response()->json([
+            'versenyek'=>$versenyek,
+        ]);
+    }
 }

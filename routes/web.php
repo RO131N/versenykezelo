@@ -30,4 +30,7 @@ Route::get('/', function () {
         Route::post('/welcome',[VersenyekController::class,'store']);
         Route::post('/fordulo',[FordulokController::class,'store']);
         Route::post('/versenyzo',[VersenyzokController::class,'store']);
-        //Route::delete('versenyzo',[VersenyzokController::class,'deleteVersenyzo']);
+        Route::get('fetch-versenyek',[VersenyekController::class,'fetchversenyek']);
+        Route::get('fetch-fordulok',[FordulokController::class,'fetchfordulok']);
+        Route::get('fetch-versenyzok',[VersenyzokController::class,'fetchversenyzok']);
+        Route::delete('delete-versenyzo/{id}',[VersenyzokController::class,'destroy']);

@@ -80,10 +80,20 @@
             </form>
                     <br>
             <p id="jelf">Jelenlegi fordulók:</p>
-            <p>Verseny neve | Forduló dátuma</p>
-            @foreach($fordulok as $fordulo)
-            <p>{{$fordulo->versenynev}}, {{$fordulo->datum}}</p>
-            @endforeach
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Verseny neve</th>
+                            <th>Forduló dátuma</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                    </tbody>
+                </table>
+
+            </div>
     </div>
     </body>
 </html>

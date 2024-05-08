@@ -121,9 +121,23 @@
             </form>
             <br>
             <p id="jelv">Jelenlegi versenyek:</p>
-            <p>Verseny neve | Verseny dátuma | Versenyen beszélt nyelvek | Jó válasz pontszáma | Rossz válasz pontszáma | Üres válasz pontszáma</p>
-                @foreach($versenyek as $verseny)
-                <p>{{$verseny->megnevezes}}, {{$verseny->datum}}, {{$verseny->nyelvek}}, {{$verseny->jopontok}}, {{$verseny->rosszpontok}}, {{$verseny->urespontok}}</p>
-                @endforeach
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Megnevezés</th>
+                            <th>Verseny éve</th>
+                            <th>Elérhető nyelvek</th>
+                            <th>Jó válaszokért járó pontok</th>
+                            <th>Rossz válaszokért járó pontok</th>
+                            <th>Üres válaszokért járó pontok</th>
+                        </tr>
+                    </thead>
+                    <tbody> 
+                    </tbody>
+                </table>
+
+            </div>
     </body>
 </html>
